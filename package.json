@@ -1,0 +1,26 @@
+{
+  "name": "@ethiclab/vue-auth0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/authGuard.js",
+  "scripts": {
+    "test": "node src/authGuard.js"
+  },
+  "keywords": [
+    "vue",
+    "auth0"
+  ],
+  "author": {
+    "name": "Eduardo Montoya",
+    "email": "tech@ethiclab.it",
+    "url": "https://ethiclab.it"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ethiclab/vue-auth0.git"
+  },
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.3.1"
+  }
+}
