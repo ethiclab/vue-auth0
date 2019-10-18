@@ -11,11 +11,7 @@ let instance;
 export const getInstance = () => instance;
 
 /** Creates an instance of the Auth0 SDK. If one has already been created, it returns that instance */
-export const useAuth0 = ({
-  onRedirectCallback = DEFAULT_REDIRECT_CALLBACK,
-  redirectUri = window.location.origin,
-  ...options
-}) => {
+export const useAuth0 = options => {
   if (instance) return instance;
 
   // The 'instance' is simply a Vue object
@@ -89,7 +85,7 @@ export const useAuth0 = ({
         domain: options.domain,
         client_id: options.clientId,
         audience: options.audience,
-        redirect_uri: redirectUri
+        redirect_uri: options.redirectUri ? options.redirectUri : window.location.origin
       });
 
       try {
@@ -103,7 +99,7 @@ export const useAuth0 = ({
 
           // Notify subscribers that the redirect callback has happened, passing the appState
           // (useful for retrieving any pre-authentication state)
-          onRedirectCallback(appState);
+          options.onRedirectCallback(appState);
         }
       } catch (e) {
         this.error = e;
