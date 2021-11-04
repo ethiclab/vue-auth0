@@ -1,6 +1,6 @@
 {
   "name": "@ethiclab/vue-auth0",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "src/authGuard.js",
   "scripts": {
@@ -21,6 +21,6 @@
     "url": "git://github.com/ethiclab/vue-auth0.git"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.3.1"
+    "@auth0/auth0-spa-js": "^1.19.2"
   }
 }
